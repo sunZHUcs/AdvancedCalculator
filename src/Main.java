@@ -1,12 +1,13 @@
 public class Main {
 
+    @SuppressWarnings({"InfiniteLoopStatement"})
     public static void main(String[] args) throws InterruptedException {
 
         //Messages.beginPrompt();
         //Messages.infoSpout();
         CalcEngine.arrayFill();
 
-        while(1==1){
+        while (true) {
             CalcEngine.methodCall();
         }
 

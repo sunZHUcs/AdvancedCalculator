@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+@SuppressWarnings("StringOperationCanBeSimplified")
 public class Messages {
 
 
@@ -25,22 +26,22 @@ public class Messages {
 
         while (tf) {
             switch (input.toLowerCase()) {
-                case "yes":
+                case "yes" -> {
                     System.out.println("Proceeding...");
                     Thread.sleep(200);
                     tf = false;
-                    break;
-                case "no", "stop", "quit":
+                }
+                case "no", "stop", "quit" -> {
                     System.out.println("Program Closing...");
                     Thread.sleep(200);
                     System.exit(0);
                     tf = false;
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Invalid input! Enter either 'Yes' or 'No'. Case does not matter.");
                     input = scanner.nextLine();
                     tf = true;
-                    break;
+                }
             }
         }
 
@@ -64,24 +65,24 @@ public class Messages {
 
         while (tf) {
             switch (input.toLowerCase()) {
-                case "yes":
+                case "yes" -> {
                     System.out.println("Launching CalcEngine...");
                     Thread.sleep(200);
                     System.out.println("CalcEngine initiated. Type in an equation to begin.");
                     System.out.println("");
                     tf = false;
-                    break;
-                case "no", "stop", "quit":
+                }
+                case "no", "stop", "quit" -> {
                     System.out.println("Program Closing...");
                     Thread.sleep(200);
                     System.exit(0);
                     tf = false;
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Invalid input! Enter either 'Yes' or 'No'. Case does not matter.");
                     input = scanner.nextLine();
                     tf = true;
-                    break;
+                }
             }
         }
     }
